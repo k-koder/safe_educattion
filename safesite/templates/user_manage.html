@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<table>
+<tr>
+    <th>
+        用户名
+    <th>
+    <th>
+        密码
+    <th>
+    <th>
+        Email
+       <th>
+    <th>
+        操作
+    <th>
+</tr>
+{% for user in Alluser %}
+<tr>
+<td> {{ user.username }}</td>
+<td> {{ user.password }}</td>
+<td> {{ user.email }}</td>
+<td><table>
+    <a href="/edit/">修改</a>
+    <a href="/delete/">删除</a>
+</table>
+</td>
+</tr>
+{% endfor  %}
+</table>
+
+{% endblock %}

@@ -1,4 +1,12 @@
 {%extends 'base.html' %}
 {% block content %}
-    <p>主页 </p>
+    <p>主页</p>
+ <body>
+ {% if not user %}
+       <p> 请登录 </p>
+ {% else %}
+     <td><a href="/account/">manage</a></td>
+     <td><a href="//">logout</a></td>
+ {% endif %}
+ </body>
 {% endblock %}

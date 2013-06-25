@@ -17,4 +17,6 @@ urlpatterns = patterns('',
      url(r'^login/',views.login),
       url(r'^register/',views.register),
       url(r'auth/',views.auth),
+      url(r'^account/',views.user_manage),
+       url(r'^delete/',views.delete_user),
 )
